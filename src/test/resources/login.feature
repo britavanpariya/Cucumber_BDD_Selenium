@@ -1,31 +1,22 @@
-@Login
-Feature: Login Functionality
-  As a End user
+@BK
+Feature: Login functionality
+  As a end user
   I want to login to the website
-  so that I can check my account
+  So that I can check my account
 
-  Background:
-    Given I am on Homepage
-    When  I click On login button
-  @ValidateLogin
-  Scenario: Validate Login page
+  Scenario: Validate login page
+    Given I am on home page
+    When I click on login button
     Then I should see "Welcome, Please Sign In!" text on login page
-    And  the URL should contain with "/login"
+<<<<<<<<< Temporary merge branch 1
+    And the URL should contain with "/login"
+=========
+    And the URL should contain with "/login"
 
-  Scenario: Login with valid details
-    And I enter Valid Email "britagajera@gmail.com" and Password "Nilu@2685"
-    And  I click On login button on Login Page
-    Then I Should see Logout button is displayed
-
-#  @Multiple
-#  Scenario Outline: Login with different valid details
-#    And I enter Valid Email "<myEmail>" and Password "<myPassword>"
-#    And  I click On login button on Login Page
-#    And I Should see Logout button is displayed
-#    Then I click on Logout button
-#
-#    Examples:
-#      | myEmail           | myPassword |
-#      | hardik@gmail.com  | hardik123  |
-#      | deep@gmail.com    | deep123    |
-#      | pritesh@gmail.com | pritesh123 |
+    Scenario: Login with valid details
+      Given I am on home page
+      When I click on login button
+      And I enter valid email "britagajera@gmail.com" and password "Nilu@2685"
+      And I click on login button on login page
+      Then I should see "Logout Button" text on login page
+>>>>>>>>> Temporary merge branch 2
