@@ -6,9 +6,9 @@ import org.example.driver.DriverManager;
 import org.example.pages.HomePage;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalToIgnoringCase;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.StringEndsWith.endsWith;
-<<<<<<< HEAD
 
 
 public class HomeSteps extends DriverManager {
@@ -28,13 +28,6 @@ public class HomeSteps extends DriverManager {
         homePage.clickOnLoginButton();
 
     }
-}
-=======
-import static org.hamcrest.text.IsEqualIgnoringCase.equalToIgnoringCase;
-
-public class HomeSteps extends DriverManager {
-    DriverManager driverManager = new DriverManager();
-    HomePage homepage = new HomePage();
 
 
     @Given("^I am on home page$")
@@ -47,11 +40,4 @@ public class HomeSteps extends DriverManager {
         System.out.println(actualTitle);
         assertThat(actualTitle,is(equalToIgnoringCase("nopCommerce demo store")));
     }
-
-    @When("^I click on login button$")
-    public void i_click_on_login_button() throws Throwable {
-   homepage.clickOnLoginButton();
-    }
-
 }
->>>>>>> origin/main

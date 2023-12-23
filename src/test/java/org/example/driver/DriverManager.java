@@ -1,28 +1,25 @@
 package org.example.driver;
 
-<<<<<<<<< Temporary merge branch 1
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-=========
 import cucumber.api.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
->>>>>>>>> Temporary merge branch 2
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.PageFactory;
-<<<<<<<<< Temporary merge branch 1
 
-=========
+
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
->>>>>>>>> Temporary merge branch 2
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -99,8 +96,6 @@ public class DriverManager {
         }
         return result.toString();
     }
-<<<<<<<<< Temporary merge branch 1
-=========
 
     public void takeElementscreenshot(WebElement element, String fileName)  {
         File scnFile =element.getScreenshotAs(OutputType.FILE);
@@ -136,5 +131,4 @@ public class DriverManager {
     public void scrollTo(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
->>>>>>>>> Temporary merge branch 2
 }
